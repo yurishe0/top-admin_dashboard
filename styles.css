@@ -1,3 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --primary-color: #047857;
+    --secondary-color: #10b981;
+    --light-color: #c6f0dc;
+    --text-dark: rgb(15, 15, 15);
+    --text-light: rgb(233, 242, 250);
+}
+
 * {
     box-sizing: border-box;
 }
+
+body {
+    margin: 0px;
+    width: 100%;
+    height: 100vh;
+
+    font-family: Roboto;
+}
+
+.sidebar, .main-page, .navbar, .main-content {
+    /* border: 1px solid black; */
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: minmax(min-content, 1fr) 5fr;
+}
+
+.sidebar {
+    background-color: var(--primary-color);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+.sidebar-link {
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 20px;
+    margin: 0.5em;
+}
+
+.sidebar > div {
+    width: 80%;
+    color: var(--text-light);
+}
+
+.sidebar > .logo, .links-container > div, .other-container > div {
+    display: flex;
+    align-items: center;
+}
+
+svg {
+    min-width: 28px;
+    min-height: 28px;
+}
+
+.logo {
+    gap: 1em;
+}
+
+.dashboard-logo {
+    min-width: 48px;
+    min-height: 48px;
+}
+
+.main-page {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+.navbar {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 10;
+}
+
+.main-content {
+    background-color: var(--text-light);
+}
+
