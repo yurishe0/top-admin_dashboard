@@ -25,13 +25,11 @@ h1 {
     padding-right: 2em;
 }
 
-
+img {
+    border-radius: 50%;
+}
 .greeting > p {
     margin-bottom: -20px;
-}
-
-.sidebar, .main-page, .navbar, .main-content {
-    /* border: 1px solid black; */
 }
 
 .wrapper {
@@ -101,6 +99,10 @@ svg {
 
 .main-content {
     background-color: var(--text-light);
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 .navbar-top {
@@ -169,4 +171,129 @@ input:focus {
     background-color: var(--secondary-color);
     border: 1px solid var(--secondary-color);
     color: var(--text-light);
+}
+
+
+.projects-container {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    place-self: center;
+
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px;
+
+    height: 90%;
+    width: 90%;
+}
+
+.project {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 20px 4px 4px 20px;
+    cursor: pointer;
+
+    margin: 20px 0px;
+
+    height: 100%;
+    width: 100%;
+
+
+    position: relative;
+}
+
+.project::before {
+    content: "";
+    height: 100%;
+    width: 10px;
+    position: absolute;
+
+    background-color: var(--primary-color);
+    border-radius: 20px 4px 4px 20px;
+
+}
+
+ .project-text {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.project-text h2 {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-style: italic;
+    text-align: center;
+}
+
+.announcements-wrapper {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.announcements-wrapper > h3 {
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+
+.announcements-container {
+    background-color: white;
+    width: 90%;
+    padding-bottom: 10px;
+    margin: 10px 0px 20px 0px;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.announcement {
+    width: 80%;
+}
+
+.announcement > h2 {
+    font-size: 20px;
+}
+
+.announcement > p {
+    font-size: 16px;
+}
+
+hr {
+    width: 90%;
+}
+
+.trending-wrapper {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.trending-wrapper > h3 {
+    font-size: 24px;
+    margin-bottom: -30px;
+}
+
+.trending-container {
+    background-color: white;
+    width: 90%;
+    height: 80%;
+    margin: 40px 0px 20px 0px;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trend {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-left: 4em;
+    gap: 1em;
+}
+
+.nickname > h2 {
+    margin-bottom: -10px;
 }
